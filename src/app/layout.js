@@ -2,9 +2,9 @@
 import Navbar from './components/Navbar'
 import './globals.css'
 import { useState } from 'react'
-import { Inter } from 'next/font/google'
 import { BsMoonFill, BsSunFill } from 'react-icons/bs'
 
+import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 // export const metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${isNightMode ? 'bg-black' : 'bg-gray-100'}`}>
       <div className={`flex justify-between p-5 text-${isNightMode ? 'white' : 'black'} font-semibold text-3xl mb-4`}>
-      <p className='flex justify-between ' onClick={toggleTheme}> {isNightMode ? <BsMoonFill style={{color: 'whitesmoke'}}/> : <BsSunFill style={{color: ''}}/>}<Navbar /></p>
+      <p className='flex justify-between ' onClick={toggleTheme}> {isNightMode ? <BsMoonFill style={{color: 'whitesmoke'}}/> : <BsSunFill style={{color: ''}}/>}</p>
       
       {children}
     </div>

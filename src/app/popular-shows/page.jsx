@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Navbar from "../components/Navbar";
 
 export default function Categories() {
   const [newDetails, setNewDetails] = useState([]);
@@ -17,6 +18,8 @@ export default function Categories() {
   }
 
   return (
+    <div>
+    <div><Navbar /></div>
     <div className="bg-cyan-950 mt-20 grid px-5 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-4">
       {newDetails.map((show) => (
         <section
@@ -36,7 +39,7 @@ export default function Categories() {
           </Link>
         </section>
       ))}
-    </div>
+    </div></div>
   );
 }
 
