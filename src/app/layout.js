@@ -1,11 +1,12 @@
 "use client"
-import Navbar from './components/Navbar'
 import './globals.css'
 import { useState } from 'react'
 import { BsMoonFill, BsSunFill } from 'react-icons/bs'
+import Footer from './components/Footer'
 
-import { Inter } from 'next/font/google'
-const inter = Inter({ subsets: ['latin'] })
+
+// import { Inter } from 'next/font/google'
+// const inter = Inter({ subsets: ['latin'] })
 
 export const details = {
   title: 'Mma Tv',
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       
       {children}
     </div>
+    <div><Footer /> </div>
       </body>
     </html>
   )
